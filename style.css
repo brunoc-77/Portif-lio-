@@ -720,20 +720,20 @@ a:focus-visible {
 
   margin-top: 28px;
 
-  min-height: 78px;
+  min-height: 66px;
 
   display: grid;
 
   grid-template-columns:
-    86px
+    minmax(72px, 0.62fr)
     1px
-    minmax(0, 1fr)
+    minmax(0, 2.15fr)
     1px
-    130px;
+    minmax(110px, 0.95fr);
 
-  gap: 22px;
+  gap: 24px;
 
-  align-items: center;
+  align-items: stretch;
 
   border-top:
     1px solid
@@ -748,9 +748,17 @@ a:focus-visible {
 
 .signature-item {
 
+  min-width: 0;
+
   display: flex;
 
   flex-direction: column;
+
+  justify-content: flex-start;
+
+  align-items: flex-start;
+
+  padding-top: 12px;
 
   gap: 5px;
 
@@ -761,15 +769,18 @@ a:focus-visible {
 
   color: var(--soft);
 
-  font-size: 7px;
+  font-family:
+    var(--display);
+
+  font-size: 7.5px;
 
   line-height: 1;
 
-  letter-spacing: 0.13em;
+  letter-spacing: 0.15em;
 
   text-transform: uppercase;
 
-  font-weight: 700;
+  font-weight: 800;
 
 }
 
@@ -781,13 +792,15 @@ a:focus-visible {
   font-family:
     var(--display);
 
-  font-size: 14px;
+  font-size: clamp(12px, 1.1vw, 16px);
 
-  line-height: 1.2;
+  line-height: 1.18;
 
   letter-spacing: -0.035em;
 
   font-weight: 700;
+
+  text-wrap: balance;
 
 }
 
@@ -813,6 +826,8 @@ a:focus-visible {
   width: 1px;
 
   height: 30px;
+
+  align-self: center;
 
   background:
     var(--line-strong);
@@ -1067,6 +1082,20 @@ a:focus-visible {
 
 .database-logo ellipse,
 .database-logo path {
+
+  stroke: currentColor;
+
+  stroke-width: 1.7;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+}
+
+
+.excel-logo rect,
+.excel-logo path {
 
   stroke: currentColor;
 
@@ -2114,17 +2143,22 @@ a:focus-visible {
 
     margin-top: 6px;
 
-    min-height: 80px;
+    min-height: 60px;
 
     grid-template-columns:
-      50px
+      minmax(48px, 0.72fr)
       1px
-      minmax(0, 1fr)
+      minmax(0, 1.7fr)
       1px
-      77px;
+      minmax(68px, 0.9fr);
 
-    gap: 9px;
+    gap: 10px;
 
+  }
+
+
+  .signature-item {
+    padding-top: 9px;
   }
 
 
@@ -2134,7 +2168,8 @@ a:focus-visible {
 
 
   .signature-item strong {
-    font-size: 8px;
+    font-size: 8.5px;
+    line-height: 1.22;
   }
 
 
@@ -2145,6 +2180,7 @@ a:focus-visible {
 
   .signature-item small {
     font-size: 6.5px;
+    line-height: 1.25;
   }
 
 
