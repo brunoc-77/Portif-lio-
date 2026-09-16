@@ -414,6 +414,11 @@ a:focus-visible {
 }
 
 
+#projetos-title span {
+  margin-top: 0.09em;
+}
+
+
 .hero {
 
   min-height: auto;
@@ -677,8 +682,6 @@ a:focus-visible {
 
 .hero-description.secondary {
 
-  color: var(--soft);
-
   font-size: 11px;
 
 }
@@ -814,9 +817,16 @@ a:focus-visible {
 
 .signature-item small {
 
-  color: var(--soft);
+  color: var(--muted);
+
+  font-family:
+    var(--display);
 
   font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
 
 }
 
